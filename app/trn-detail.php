@@ -21,7 +21,7 @@
         <div class="form-group">
           <input class="form-control" type="hidden" name="id_lab_trn" value="<?php echo $id_lab_trn?>">
         </div>
-        <button type="submit" class="btn btn-primary"><i class='fa fa-print'></i> Print</button>
+        <button type="submit" class="btn btn-success"><i class='fa fa-print'></i> Print</button>
       </form>
     </div>
     <div align="right" class="col-lg-6">
@@ -164,7 +164,7 @@
                     <label>Hasil</label>
                     <input class="form-control" type="text" name="hasil_uji" placeholder="Masukkan Hasil.." required="">
                   </div>
-                  <button type="submit" name="hasilsubmit" class="btn btn-success">Submit</button>
+                  <button type="submit" name="hasilsubmit" class="btn btn-primary">Submit</button>
                 </form>
               </div>
             </div>

@@ -148,17 +148,17 @@
 
                       $simpan=mysqli_query($koneksi,"INSERT INTO mr_pasien (id_pasien, id_catatan_medik, nama_pasien, sex, tempat, tgl_lahir, alamat, kabupaten, kecamatan, kelurahan, telp, email)VALUES('','$id_catatan_medik','$nama_pasien','$sex','$tempat','$tgl_lahir','$alamat','$kabupaten','$kecamatan','$kelurahan','$telp','$email')");
                       if($simpan){
-                        echo '<script>
+                        echo "<script>
                         setTimeout(function() {
                           swal({
-                            title: "Sukses",
-                            text: "Menambah Pasien Baru",
-                            type: "success"
+                            title: 'Sukses',
+                            text: 'Membuat Form Permintaan',
+                            type: 'success'
                             }, function() {
-                              window.location = "pendaftaran.php";
+                              window.location = 'pendaftaran-detail.php?id=$id_catatan_medik';
                               });
                               }, 10);
-                              </script>';
+                              </script>";
                             }else{
                               echo '<script>
                               setTimeout(function() {

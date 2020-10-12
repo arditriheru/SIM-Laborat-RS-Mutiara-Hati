@@ -68,12 +68,12 @@
 							<div class="kotak_login">
 								<div align="center"><img class="img-responsive" src="../images/logo.png" width="100%" alt="RS Permata"></div><br>
 								<form method="post">
-									<label>Username</label>
-									<input type="text" name="username" class="form_login" placeholder="Silahkan Masukkan.." required>
-									<label>Password</label>
-									<input type="password" name="password" class="form_login" placeholder="Silahkan Masukkan.." required>
-									<input type="submit" class="tombol_login" name="loginsubmit" value="LOGIN">
-									<br><br>		
+									<!-- <label>Username</label> -->
+									<input type="text" name="username" class="form_login" placeholder="Username" required>
+									<!-- <label>Password</label> -->
+									<input type="password" name="password" class="form_login" placeholder="Password" required>
+									<input type="submit" class="tombol_login" name="loginsubmit" value="Submit">
+									<br><br>			
 								</form>
 								<?php include "../config/copyright.php";?>
 							</div>

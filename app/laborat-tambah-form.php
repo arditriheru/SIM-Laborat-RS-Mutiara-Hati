@@ -11,7 +11,7 @@
       <ol class="breadcrumb">
         <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li><a href="laborat-tambah.php"><i class="fa fa-check-square-o"></i> Poliklinik</a></li>
-        <li class="active"><i class="fa fa-check-square-o"></i> Pemeriksaan Laborat</li>
+        <li class="active"><i class="fa fa-check-square-o"></i> Form</li>
       </ol>  
       <?php include "../config/welcome.php"?>
     </div>
@@ -89,7 +89,7 @@
                        <form method="post" action="" role="form">
                         <div class="col-lg-4">
                           <div class="form-group">
-                            <label>No. Rekam Medik</label>
+                            <label>Nomor Rekam Medik</label>
                             <input class="form-control" type="text" name="id_catatan_medik" value="<?php echo $b['id_catatan_medik'];?>" readonly="">
                           </div>
                         </div>
@@ -110,12 +110,12 @@
                           <div class="col-lg-12">
                             <div class="col-lg-4">
                               <div class="form-group">
-                                <label>Diagnosa Dokter</label>
+                                <label>Diagnosa</label>
                                 <input class="form-control" type="text" name="dx" required="">
                               </div>
                             </div>
                           </div>
-                        </div><br>
+                        </div><hr>
                         <div class="row">
                           <div class="col-lg-12">
                             <div class="col-lg-3">
@@ -205,7 +205,7 @@
                                     </div>
                                   </div><br>
                                   <button type="submit" name="tambahsubmit" class="btn btn-primary">Tambah</button>
-                                  <a href="form-permintaan.php?id=<?php echo $id_lab_trn ?>"><button type="button" class="btn btn-success"><i class="fa fa-print"></i> Print</button></a>
+                                  <a href="form-permintaan.php?id=<?php echo $id_lab_trn ?>"><button type="button" class="btn btn-success"><i class="fa fa-print"></i> Cetak</button></a>
                                   </form><?php } ?>
                                 </div>
                               </div>

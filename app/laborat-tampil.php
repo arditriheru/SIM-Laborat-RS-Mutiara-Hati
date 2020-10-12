@@ -27,7 +27,7 @@
                   <th><center>Tempat, Tgl Lahir</center></th>
                   <th><center>Asal</center></th>
                   <th><center>Nama Dokter</center></th>
-                  <th colspan='2'><center>Action</center></th>
+                  <th colspan='2'><center>Menu</center></th>
                 </tr>
               </thead>
               <tbody>

@@ -31,7 +31,7 @@
 					<div class="container">
 						<div class="container">
 							<div class="noprint">
-								<a href="laborat-tambah.php"><button type="button" class="btn btn-warning"><i class="fa fa-arrow-left"></i> Back</button></a>
+								<a href="laborat-tambah.php"><button type="button" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Back</button></a>
 							</div>
 							<br><br><br>
 							<center>
@@ -40,7 +40,7 @@
 								</div>
 							</center><br>
 							<div align="center">
-								<h4><strong>FORM PERMINTAAN PEMERIKSAAN LABORATORIUM</strong></h4>
+								<h4><strong>FORM PERMINTAAN PEMERIKSAAN LABORATORIUM</strong></h4><br>
 							</div>
 							<table class="table table-bordered">
 								<tbody>

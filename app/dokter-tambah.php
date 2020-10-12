@@ -10,7 +10,7 @@
       <h1>Dokter <small>Tambah</small></h1>
       <ol class="breadcrumb">
         <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li class="active"><i class="fa fa-check-square-o"></i> Dokter</li>
+        <li class="active"><i class="fa fa-check-square-o"></i> Dokter Baru</li>
       </ol>  
       <?php include "../config/welcome.php"?>
     </div>
@@ -20,7 +20,7 @@
       <form method="post" action="" role="form">
         <div class="form-group">
           <label>Nama Dokter</label>
-          <input class="form-control" type="text" name="nama_dokter" placeholder="Silahkan Masukkan.." required="">
+          <input class="form-control" type="text" name="nama_dokter" placeholder="Masukkan.." required="">
         </div>
         <div class="form-group">
           <label>Nama Unit</label>
@@ -35,7 +35,7 @@
             ?>
           </select>
         </div>
-        <button type="submit" name="tambahsubmit" class="btn btn-primary">Tambah</button>
+        <button type="submit" name="tambahsubmit" class="btn btn-primary">Submit</button>
       </form>
       <?php
       if(isset($_POST['tambahsubmit'])){
@@ -78,7 +78,7 @@
                         <tr>
                           <th><center>#</center></th>
                           <th><center>Nama Dokter</center></th>
-                          <th><center>Unit</center></th>
+                          <th><center>Nama Unit</center></th>
                           <!-- <th colspan='2'><center>Action</center></th> -->
                         </tr>
                       </thead>

@@ -7,7 +7,7 @@
 <div id="page-wrapper">
   <div class="row">
     <div class="col-lg-12">
-      <h1>Poliklinik <small><?php include "../config/date-time.php";?></small></h1>
+      <h1>Pasien <small>Poliklinik</small></h1>
       <ol class="breadcrumb">
         <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li class="active"><i class="fa fa-check-square-o"></i> Poliklinik</li>
@@ -41,14 +41,14 @@
               <th><center>Tempat, Tgl Lahir</center></th>
               <th><center>Asal</center></th>
               <th><center>Nama Dokter</center></th>
-              <th colspan='2'><center>Action</center></th>
+              <th colspan='2'><center>Menu</center></th>
             </tr>
           </thead>
           <tbody>
             <?php 
             $no = 1;
             $data = mysqli_query($koneksi,
-              "SELECT *, mr_pasien.nama_pasien, mr_pasien.tempat, mr_pasien.tgl_lahir, mr_dokter.nama_dokter, mr_unit.nama_unit
+              "SELECT *, mr_pendaftaran.selesai AS stsprint, mr_pasien.nama_pasien, mr_pasien.tempat, mr_pasien.tgl_lahir, mr_dokter.nama_dokter, mr_unit.nama_unit
               FROM mr_pendaftaran
               INNER JOIN mr_pasien
               ON mr_pendaftaran.id_catatan_medik=mr_pasien.id_catatan_medik
@@ -71,51 +71,58 @@
                 <td><center><?php echo $d['tempat'].', '.date('d F Y', strtotime($tgl_lahir)); ?></center></td>
                 <td><center><?php echo $d['nama_unit']; ?></center></td>
                 <td><center><?php echo $d['nama_dokter']; ?></center></td>
-                <td>
-                  <div align="center">
-                    <a href="laborat-tambah-form.php?id=<?php echo $d['id_mr_pendaftaran']; ?>"
-                      <button type="button" class="btn btn-success"><i class='fa fa-sign-in'></i></button></a>
-                    </div>
-                  </td>
-                  </tr><?php } ?>
-                </tbody>
-              </table>
-            </div><!-- col-lg-12 -->
-          </div>
-        </div>
-        <?php
-        if(isset($_POST['tambahsubmit'])){
-          $id_catatan_medik = $_POST['id_catatan_medik'];
-          $id_dokter        = $_POST['id_dokter'];
-          $selesai          = '0';
-
-          $simpan=mysqli_query($koneksi,"INSERT INTO mr_pendaftaran (id_mr_pendaftaran, id_catatan_medik, id_dokter, tanggal, jam, selesai)VALUES('','$id_catatan_medik','$id_dokter','$tanggalsekarang','$jamsekarang','$selesai')");
-          if($simpan){
-            echo '<script>
-            setTimeout(function() {
-              swal({
-                title: "Sukses",
-                text: "Mendaftarkan Pasien",
-                type: "success"
-                }, function() {
-                  window.location = "pendaftaran.php";
-                  });
-                  }, 10);
-                  </script>';
-                }else{
-                  echo '<script>
-                  setTimeout(function() {
-                    swal({
-                      title: "Upss..",
-                      text: "Coba Sekali Lagi",
-                      type: "error"
-                      }, function() {
-                        window.location = "pendaftaran.php";
-                        });
-                        }, 10);
-                        </script>';
-                      }
-                    }
+                <?php
+                if($d['stsprint']=='1'){ ?>
+                  <td><center><button type="button" class="btn btn-primary"><i class='fa fa-check'></center></td>
+                  <?php }else{ ?>
+                    <td><center><button type="button" class="btn btn-danger"><i class='fa fa-times'></center></td>
+                    <?php }
                     ?>
-                  </div><!-- /#page-wrapper -->
-                  <?php include "views/footer.php"; ?>
+                    <td>
+                      <div align="center">
+                        <a href="laborat-tambah-form.php?id=<?php echo $d['id_mr_pendaftaran']; ?>"
+                          <button type="button" class="btn btn-success"><i class='fa fa-folder-open'></i></button></a>
+                        </div>
+                      </td>
+                      </tr><?php } ?>
+                    </tbody>
+                  </table>
+                </div><!-- col-lg-12 -->
+              </div>
+            </div>
+            <?php
+            if(isset($_POST['tambahsubmit'])){
+              $id_catatan_medik = $_POST['id_catatan_medik'];
+              $id_dokter        = $_POST['id_dokter'];
+              $selesai          = '0';
+
+              $simpan=mysqli_query($koneksi,"INSERT INTO mr_pendaftaran (id_mr_pendaftaran, id_catatan_medik, id_dokter, tanggal, jam, selesai)VALUES('','$id_catatan_medik','$id_dokter','$tanggalsekarang','$jamsekarang','$selesai')");
+              if($simpan){
+                echo '<script>
+                setTimeout(function() {
+                  swal({
+                    title: "Sukses",
+                    text: "Mendaftarkan Pasien",
+                    type: "success"
+                    }, function() {
+                      window.location = "pendaftaran.php";
+                      });
+                      }, 10);
+                      </script>';
+                    }else{
+                      echo '<script>
+                      setTimeout(function() {
+                        swal({
+                          title: "Upss..",
+                          text: "Coba Sekali Lagi",
+                          type: "error"
+                          }, function() {
+                            window.location = "pendaftaran.php";
+                            });
+                            }, 10);
+                            </script>';
+                          }
+                        }
+                        ?>
+                      </div><!-- /#page-wrapper -->
+                      <?php include "views/footer.php"; ?>

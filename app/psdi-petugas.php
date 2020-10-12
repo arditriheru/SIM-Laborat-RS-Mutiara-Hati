@@ -20,17 +20,17 @@
       <form method="post" action="" role="form">
         <div class="form-group">
           <label>Nama Petugas</label>
-          <input class="form-control" type="text" name="nama_petugas" placeholder="Silahkan Masukkan.." required="">
+          <input class="form-control" type="text" name="nama_petugas" placeholder="Masukkan.." required="">
         </div>
         <div class="form-group">
           <label>Username</label>
-          <input class="form-control" type="text" name="username" placeholder="Silahkan Masukkan.." required="">
+          <input class="form-control" type="text" name="username" placeholder="Masukkan.." required="">
         </div>
         <div class="form-group">
           <label>Password</label>
-          <input class="form-control" type="text" name="password" placeholder="Silahkan Masukkan.." required="">
+          <input class="form-control" type="text" name="password" placeholder="Masukkan.." required="">
         </div>
-        <button type="submit" name="tambahsubmit" class="btn btn-primary">Tambah</button>
+        <button type="submit" name="tambahsubmit" class="btn btn-success">Submit</button>
       </form>
       <?php
       if(isset($_POST['tambahsubmit'])){
@@ -74,7 +74,7 @@
                         <tr>
                           <th><center>#</center></th>
                           <th><center>Nama Petugas</center></th>
-                          <th><center>Unit</center></th>
+                          <th><center>Username</center></th>
                           <!-- <th colspan='2'><center>Action</center></th> -->
                         </tr>
                       </thead>

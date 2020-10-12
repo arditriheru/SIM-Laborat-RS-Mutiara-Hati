@@ -33,24 +33,24 @@
 					<div class="container">
 						<div class="container">
 							<div class="noprint">
-								<a href="laborat-tampil.php"><button type="button" class="btn btn-warning"><i class="fa fa-arrow-left"></i> Back</button></a>
+								<a href="dashboard.php"><button type="button" class="btn btn-success">Dashboard</button></a>
 							</div>
 							<br><br><br>
+							<row>
+								<div align="right">
+									<img class="img-responsive" src="../images/imagesbarcode/<?php echo $d['id_catatan_medik']; ?>.png" width="15%" alt="imagesbarcode">
+								</div>
+							</row>
 							<center>
 								<div class="row">
 									<img class="img-responsive" src="../images/Kop Surat.jpg" width="100%" alt="Kop Surat Laboratorium">
 								</div>
 							</center><br>
 							<div align="center">
-								<h4><strong>HASIL PEMERIKSAAN LABORATORIUM</strong></h4>
+								<h4><strong>HASIL PEMERIKSAAN LABORATORIUM</strong></h4><br>
 							</div>
 							<table class="table table-bordered">
 								<tbody>
-									<tr>
-										<div align="right">
-											<img class="img-responsive" src="../images/imagesbarcode/<?php echo $d['id_catatan_medik']; ?>.png" width="15%" alt="imagesbarcode">
-										</div>
-									</tr>
 									<tr>
 										<td><b>No.RM</b></td>
 										<td><?php echo $d['id_catatan_medik']; ?></td>

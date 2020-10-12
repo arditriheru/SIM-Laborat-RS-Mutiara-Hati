@@ -7,10 +7,10 @@
 <div id="page-wrapper">
   <div class="row">
     <div class="col-lg-12">
-      <h1>Parameter <small>Tambah</small></h1>
+      <h1>Tarif <small>Tambah</small></h1>
       <ol class="breadcrumb">
         <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li class="active"><i class="fa fa-check-square-o"></i> Parameter</li>
+        <li class="active"><i class="fa fa-check-square-o"></i> Tarif</li>
       </ol>  
       <?php include "../config/welcome.php"?>
     </div>
@@ -58,7 +58,7 @@
             <option value="5">Lain-lain</option>
           </select>
         </div>
-        <button type="submit" name="tambahsubmit" class="btn btn-primary">Tambah</button>
+        <button type="submit" name="tambahsubmit" class="btn btn-success">Submit</button>
       </form>
       <?php
       if(isset($_POST['tambahsubmit'])){
@@ -108,7 +108,7 @@
                           <th><center>Nilai Normal</center></th>
                           <th><center>Satuan</center></th>
                           <th><center>Tarif</center></th>
-                          <!-- <th colspan='2'><center>Action</center></th> -->
+                          <th colspan='2'><center>Menu</center></th>
                         </tr>
                       </thead>
                       <tbody>
@@ -124,12 +124,12 @@
                             <td><center><?php echo $d['nilai_normal']; ?></center></td>
                             <td><center><?php echo $d['satuan']; ?></center></td>
                             <td><center><?php echo $d['tarif']; ?></center></td>
-                            <!-- <td>
+                            <td>
                               <div align="center">
-                                <a href="trn-detail.php?id=<?php echo $d['id_lab_trn']; ?>"
-                                  <button type="button" class="btn btn-success"><i class='fa fa-file-text'></i></button></a>
+                                <a href="laborat-tarif-edit.php?id=<?php echo $d['id_lab_tarif']; ?>"
+                                  <button type="button" class="btn btn-success"><i class='fa fa-pencil'></i></button></a>
                                 </div>
-                              </td> -->
+                              </td>
                               </tr><?php } ?>
                             </tbody>
                           </table>
